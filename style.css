@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .button-container {
+    display: flex; 
+    justify-content: space-evenly;
+  }
+  
+  .button-container button {
+    font-size: 3rem;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  #exercise-image {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+  }
+  
+  #timer {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  #start-button {
+    background-color: green;
+  }
+
+  #stop-button {
+    background-color: yellow;
+  }
+
+  #reset-button {
+    background-color: red;
+  }
+  
