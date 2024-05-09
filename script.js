@@ -1,7 +1,7 @@
-const exerciseNames = ["Knee Push Ups", "Half Burpee", "Knee to Elbow Plank"];
+const exerciseNames = ["Current Workout", "Push Ups", "Arch Up", "Burpees", "Bridge Race", "Knee to Elbow Plank", "Lunges", "Site to Site Plank"];
 const exerciseName = document.getElementById("exercise-name");
 
-const exerciseImages = ["images/start-stopwatch.jpeg", "images/knee-push-ups.jpeg", "images/half-burpee.jpeg", "images/plank-knee-to-elbow.jpeg"];
+const exerciseImages = ["images/start-stopwatch.jpeg", "images/push-ups.png", "images/arch-up.png", "images/burpees.png", "images/bridge-race.png", "images/knee-to-elbow-plank.png", "images/lunges.png", "images/site-to-site-plank.png"];
 let currentExerciseIndex = 0;
 let exerciseTime = 0;
 const exerciseImage = document.getElementById("exercise-image");
@@ -28,7 +28,7 @@ function timer() {
 
 function startClock() {
     if (interval) stopClock()
-    interval = setInterval(timer, 200)
+    interval = setInterval(timer, 1000)
 }
 
 function stopClock() {
@@ -42,14 +42,18 @@ function resetClock() {
     currentExerciseIndex = 0;
     resetExerciseTime()
     setImage()
+    setExerciseName()
 }
 
 function setImage(){
-    image.src = exerciseImages[currentExerciseIndex];
+    exerciseImage.src = exerciseImages[currentExerciseIndex];
     if(secondsElapsed > exerciseTime){
         currentExerciseIndex++;
+        if(currentExerciseIndex == 8){
+            return finishExercise()
+        }
         setExerciseTime()
-        image.src = exerciseImages[currentExerciseIndex];
+        exerciseImage.src = exerciseImages[currentExerciseIndex];
     }
 }
 
@@ -67,6 +71,22 @@ function setExerciseTime(){
             exerciseTime += 60;
             setExerciseName()
             break;
+        case 4:
+            exerciseTime += 30;
+            setExerciseName()
+            break;
+        case 5:
+            exerciseTime += 30;
+            setExerciseName()
+            break;
+        case 6:
+            exerciseTime += 60;
+            setExerciseName()
+            break;
+        case 7:
+            exerciseTime += 60;
+            setExerciseName()
+            break;
     }
 }
 
@@ -75,5 +95,9 @@ function resetExerciseTime(){
 }
 
 function setExerciseName(){
-    exerciseName.innerHTML = exerciseNames[currentExerciseIndex-1];
+    exerciseName.innerHTML = exerciseNames[currentExerciseIndex];
+}
+
+function finishExercise(){
+    resetClock()
 }
