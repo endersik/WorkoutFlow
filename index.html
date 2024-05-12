@@ -4,20 +4,24 @@
     <title>WorkoutFlow</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: aqua;">
-    <div class="container">
-        <h1 style="color:blueviolet;">Workout Flow</h1><br>
+<body>
+    <div id="names" class="container">
+        <h1 id="web-site-name">Workout Flow</h1><br>
         <h3 id="exercise-name" >Current Workout</h3>
+    </div> 
+    
+    <div class="container">
         <image id="exercise-image" src="images/start-stopwatch.jpeg" alt="Start Stopwatch"></image>
-    
-        <h3 id="timer" >00:00</h3>
-    
-        <div class="button-container">    
-            <button id="start-button" onclick="startClock()">Start</button>
-            <button id="stop-button" onclick="stopClock()">Stop</button>
-            <button id="reset-button" onclick="resetClock()">Reset</button>
-        </div>
     </div>
+    
+    <div id="timer" class="container"><h3>00:00</h3></div>
+    
+    <div id="buttons" class="button-container">    
+        <button id="start-button" onclick="startClock()">Start</button>
+        <button id="stop-button" onclick="stopClock()">Stop</button>
+        <button id="reset-button" onclick="resetClock()">Reset</button>
+    </div>
+    
 
     <script src="script.js"></script>
 </body>

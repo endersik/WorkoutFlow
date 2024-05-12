@@ -1,46 +1,80 @@
+body {
+  background-color:antiquewhite;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 10vh;
+    font-size: 2rem;
+  }
+
+  #names {
+    background-color: aquamarine;
+    margin-bottom: 30px;
+    color:rgb(24, 142, 142);
+  }
+
+  #web-site-name {
+    background-color: bisque;
+    padding: 10px;
+    padding-inline: 30px;
+  }
+
+  #exercise-name {
+    background-color: bisque;
+    padding: 15px 50px;
+  }
+
+  #buttons {
+    background-color: aquamarine;
+    padding-bottom: 20%;
   }
 
   .button-container {
     display: flex; 
-    justify-content: space-evenly;
+    justify-content:center;
+    padding: 5rem;
   }
   
   .button-container button {
     font-size: 3rem;
-    padding: 25px 50px;
+    margin: 3rem;
+    margin-inline: 2rem;
+    padding: 15px 50px;
     border: none;
-    border-radius: 10px;
-    color: black;
+    border-radius: 30px;
+    background-color: bisque;
+    color:rgb(10, 146, 87);
     cursor: pointer;
-    margin: 5px;
   }
+
+  .button-container button:hover {
+    opacity: 0.8;
+  }
+
+
 
   #exercise-image {
     width: 775px;
     height: 600px;
     object-fit: cover;
+    border: 10px solid;
+    border-color:aquamarine;
+    border-radius: 30px;
   }
   
   #timer {
     font-size: 3rem;
-    margin-bottom: 20px;
+    color:rgb(10, 146, 87);
+    border: none;
   }
 
-  #start-button {
-    background-color: green;
-  }
 
-  #stop-button {
-    background-color: yellow;
-  }
 
-  #reset-button {
-    background-color: red;
-  }
+
+
   
